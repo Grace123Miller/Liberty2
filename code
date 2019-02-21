@@ -1,0 +1,39 @@
+    return 0;
+}
+
+void left(int milliseconds)
+{  
+	create_drive_direct(-50,50);  
+    msleep(milliseconds);
+}   
+    
+ void right(int milliseconds)
+{  
+	create_drive_direct(50,-50);  
+    msleep(milliseconds);
+}      
+  
+void armup(int milliseconds)
+{
+   	motor(0,75); 
+    msleep(milliseconds);
+}
+
+void armdown(int milliseconds)
+{
+   	motor(0,-75); 
+    msleep(milliseconds);
+}
+
+void forward(int milliseconds)
+{  
+	create_drive_direct(75,75);  
+    msleep(milliseconds);
+}  
+
+void linefollow()
+{  
+	while(analog(0) < 1500)
+    {
+        
+}
