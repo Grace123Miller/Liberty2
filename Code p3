@@ -1,0 +1,25 @@
+void forward(int milliseconds);
+void backward(int milliseconds);
+void left(int milliseconds);
+void right(int milliseconds);
+void armup();
+void armdown();
+void openclaw();
+void closeclaw();
+void et();
+int main()
+{
+    enable_servos();
+    //looking at fireman
+    left(900);
+    openclaw();
+    //going towards fireman
+    forward(400);
+    closeclaw();
+    armup();
+    
+    forward(500);
+    left(900);
+    
+    return 0;
+}
